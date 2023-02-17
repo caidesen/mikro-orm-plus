@@ -1,11 +1,19 @@
 # mikro-orm-plus
 Some useful features for MikroORM
 
+## Installation
+
+```bash
+$ npm install mikro-orm-plus
+$ yarn add mikro-orm-plus
+$ pnpm install mikro-orm-plus
+```
+
 ## @CreateDateProperty
 Special property that is automatically set to the entity's insertion time. You don't need to write a value into this property - it will be automatically set. 
 ```typescript
 import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
-import { CreateDateProperty } from '@mikro-orm-plus';
+import { CreateDateProperty } from 'mikro-orm-plus';
 
 @Entity()
 export class User {
@@ -26,7 +34,7 @@ export class User {
 Special property that is automatically set to the entity's update time. You don't need to write a value into this property - it will be automatically set. 
 ```typescript
 import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
-import { UpdateDateProperty } from '@mikro-orm-plus';
+import { UpdateDateProperty } from 'mikro-orm-plus';
 
 @Entity()
 export class User {
@@ -51,7 +59,7 @@ This feature is base on [mikro-orm-soft-delete](https://github.com/TheNightmareX
 ### Soft deletable entity define: 
 ```typescript
 import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
-import { DeleteDateProperty } from '@mikro-orm-plus';
+import { DeleteDateProperty } from 'mikro-orm-plus';
 
 @Entity()
 export class User {
