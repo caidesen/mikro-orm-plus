@@ -17,7 +17,7 @@ test('create date and update date test', async () => {
   const orm = await getOrm([Book]);
   const em = orm.em.fork();
   const book = em.create(Book, { title: 'test' });
-  await em.persist(book);
+  await em.persistAndFlush(book);
   const persistedBook = await em.findOneOrFail(Book, { id: book.id });
   expect(persistedBook.createAt).not.toBeNull();
   expect(persistedBook.updateAt).toEqual(book.createAt);
