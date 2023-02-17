@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "dist", "**/*spec.ts"],
+  "files": ["src/index.ts"],
+  "compilerOptions": {
+    "incremental": false,
+    "sourceMap": false,
+    "removeComments": false
+  }
+}
