@@ -1,6 +1,6 @@
 {
   "name": "mikro-orm-plus",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Some useful features for MikroORM",
   "author": "caidesen",
   "license": "MIT",
