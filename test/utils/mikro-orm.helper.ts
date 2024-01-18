@@ -1,6 +1,8 @@
 import { defineConfig, MikroORM } from '@mikro-orm/sqlite';
+import { SoftDeletableHandlerSubscriber } from '../../src';
 
 const config = defineConfig({
+  subscribers: [SoftDeletableHandlerSubscriber],
   dbName: 'db/test.db',
   debug: true,
 });

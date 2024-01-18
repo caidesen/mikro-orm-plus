@@ -3,7 +3,6 @@ import {
   ChangeSetType,
   EventSubscriber,
   FlushEventArgs,
-  Subscriber,
 } from '@mikro-orm/core';
 
 import { SOFT_DELETABLE } from './soft-deletable.symbol';
@@ -14,7 +13,6 @@ import { SoftDeletableMetadata } from './soft-deletable-metadata.interface';
  *
  * @see https://github.com/mikro-orm/mikro-orm/issues/1492#issuecomment-785394397
  */
-@Subscriber()
 export class SoftDeletableHandlerSubscriber implements EventSubscriber {
   async onFlush({ uow }: FlushEventArgs): Promise<void> {
     const deletionChangeSets = uow

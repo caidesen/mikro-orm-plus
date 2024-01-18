@@ -16,7 +16,9 @@ import { SoftDeletableMetadata } from './soft-deletable-metadata.interface';
  * @param options
  * @constructor
  */
-export const DeleteDateProperty = <T>(options?: PropertyOptions<T>) => {
+export const DeleteDateProperty = <T extends object>(
+  options?: PropertyOptions<T>,
+) => {
   const property = Property<T>({ ...options, nullable: true });
   return (target: T, propertyKey: string) => {
     if (Reflect.hasMetadata(SOFT_DELETABLE, target.constructor)) {
